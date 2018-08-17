@@ -1,0 +1,16 @@
+{
+  "name": "mini-redux",
+  "version": "1.0.0",
+  "description": "implementation of redux",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuchiu",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
