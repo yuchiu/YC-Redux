@@ -1,29 +1,29 @@
 {
-  "name": "mini-redux",
-  "version": "1.0.0",
+  "name": "basic-redux",
+  "version": "1.0.7",
   "description": "implementation of redux",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "babel-node test.js",
+    "build": "babel basicRedux.js --out-file index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yuchiu",
   "license": "MIT",
-  "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
-  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
     "cross-env": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.2"
-  }
+  },
+  "dependencies": {}
 }

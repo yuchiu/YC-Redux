@@ -1,32 +1,27 @@
-// eslint-disable-next-line import/named
-import { createStore } from "./mini-redux";
+"use strict";
 
-const counter = (state = 0, action) => {
-  console.log(state, action);
-  switch (action.type) {
-    case "ADD":
-      return state + 1;
-    case "MINUS":
-      return state - 1;
-    default:
-      return 10;
-  }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var createStore = exports.createStore = function createStore(reducer) {
+  var currentState = {};
+  var currentListeners = [];
+  var getState = function getState() {
+    return currentState;
+  };
+
+  // should check if var passed in is a valid function
+  var subscribe = function subscribe(listener) {
+    currentListeners.push(listener);
+  };
+  var dispatch = function dispatch(action) {
+    currentState = reducer(currentState, action);
+    currentListeners.forEach(function (f) {
+      return f();
+    });
+    return action;
+  };
+  // init createStore state with dispatch
+  dispatch({ type: "@MINI-REDUX/GENISIS-DISPATCH" });
+  return { getState: getState, subscribe: subscribe, dispatch: dispatch };
 };
-
-const store = createStore(counter);
-
-const init = store.getState();
-
-console.log(`init with num:${init}.`);
-
-const listener = () => {
-  const current = store.getState();
-  console.log(`current with num:${current}.`);
-};
-store.subscribe(listener);
-
-store.dispatch({ type: "ADD" });
-store.dispatch({ type: "ADD" });
-store.dispatch({ type: "ADD" });
-store.dispatch({ type: "MINUS" });
-store.dispatch({ type: "MINUS" });
