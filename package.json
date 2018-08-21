@@ -1,11 +1,11 @@
 {
   "name": "basic-redux",
-  "version": "1.0.7",
-  "description": "implementation of redux",
+  "version": "1.0.8",
+  "description": "implementation of a basic redux",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node test.js",
-    "build": "babel basicRedux.js --out-file index.js",
+    "start": "babel-node src/test.js",
+    "build": "babel src/basicRedux.js --out-file index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yuchiu",
@@ -17,7 +17,6 @@
     "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "uglifyjs-webpack-plugin": "^1.2.7",
     "cross-env": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.14.0",

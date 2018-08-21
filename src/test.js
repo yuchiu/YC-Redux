@@ -19,7 +19,7 @@ const init = store.getState();
 
 console.log(`init with num:${init}.`);
 
-// pass in listener function in subscribe
+// pass in listener function into subscribe
 store.subscribe(() => {
   const current = store.getState();
   console.log(`current with num:${current}.`);

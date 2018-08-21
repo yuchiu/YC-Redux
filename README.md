@@ -1,6 +1,12 @@
 # basic-redux
 
-implementation of basic redux
+implementation of a basic redux
+
+## repository:
+
+github: [https://github.com/yuchiu/basic-redux](https://github.com/yuchiu/basic-redux)
+
+NPM: [https://www.npmjs.com/package/basic-redux](https://www.npmjs.com/package/basic-redux)
 
 ## Usage
 
@@ -29,12 +35,11 @@ npm install
 2.  change version number in package.json
 
 3.  transpile es7 into es5
+    input file: src/basicRedux.js ==> outpufile: index.js
 
 ```
 npm run build
 ```
-
-input file: basicRedux.js ==> outpufile: index.js
 
 4.  publish
 
